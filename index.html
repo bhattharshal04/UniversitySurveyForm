@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- This is the declaration stating that this is HTML 5 -->
+<html lang="en">
+<head>
+  <!-- CSS file link -->
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <!-- Form Title -->
+  <title>University Survey Form</title>
+</head>
+<body>
+  <main id="main">
+  <header class="header">
+    <h1 id="title">University Survey Form</h1>
+    <p id="description">Thank you for taking time to help us server better.</p>
+  </header>
+  <form id="survey-form">
+    
+    <div id="form-group">
+      <label id="name-label"            for="name">Full Name:</label>
+      <input id="name" type="text" placeholder="Please, Enter your full name." name="name" class="input-textarea" required>
+    </div>
+    
+    <div id="form-group">
+      <label id="email-label" for="email">University Email:</label>
+      <input id="email" type="email"  placeholder="Please, Enter your school email." name="email" class="input-textarea" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+    </div>
+    
+    <div id="form-group">
+      <label id="number-label" for="number">Age: (Optional)</label>
+      <input id="number" type="number" placeholder="Please, Enter your age" name="age" min="10" max="99" class="input-textarea">
+    </div>
+    
+    <div id="form-group">
+    <p id="select-para">Which option best describes your current hobby ?</p>
+    <select id="dropdown" name="role" required>
+      <option disabled selected value>Select favourite hobby</option>
+      <option value="reading">Reading</option>
+      <option value="sports">Sports</option>
+      <option value="music">Music</option>
+      <option value="preferNo">Prefer Not To Say</option>
+      <option value="other">Other</option>
+      </select>
+   </div>
+   <div id="form-group">
+     <p id="radio-para">Would you recommend our platfrom to your friends?</p>
+     <label>
+       <input name="user-recommend" type="radio" value="definitely" class="input-radio" checked>Definitely
+     </label>
+     <label>
+       <input name="user-recommend" type="radio" value="maybe" class="input-radio" >Maybe
+     </label>
+     <label>
+       <input name="user-recommend" type="radio" value="not sure" class="input-radio" >Not Sure
+     </label>
+   </div>
+    
+    <div id="form-group">
+      <p id="check-para">What is your favourite feature about our platform?<span class="clue">(Check all that applay)</span></p>
+      <label>
+        <input name="prefer" value="rent-different-school-products" type="checkbox" class="input-checkbox">
+        Rent Different School Products
+      </label>
+      <label>
+        <input name="prefer" value="buy-different-school-products" type="checkbox" class="input-checkbox">
+        Buy Different School Products
+      </label>
+      <label>
+        <input name="prefer" value="our-security" type="checkbox" class="input-checkbox">
+        Our Security
+      </label>
+      <label>
+        <input name="prefer" value="customer-support" type="checkbox" class="input-checkbox">
+        Customer Support
+      </label>
+      
+      <div id="form-group">
+        <p id="textarea-para"> Any comments or suggestion.</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+    </div>
+      
+      <div id="form-group">
+        <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+      </div>
+  </form> 
+</main>
+</body>
+</html>
